@@ -1,0 +1,77 @@
+body, html {
+  font-family: 'Karla', sans-serif;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background: #222;
+  height: 100%;
+  /* max-width: 800px;*/
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 1500px;
+}
+
+.container:after {
+  box-shadow: inset 5px 5px 80px rgba(0, 0, 0, 0.8);
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.wrap {
+  position: absolute;
+  top: -60%;
+  left: -10%;
+  height: 300%;
+  width: 200%;
+  transform: rotateX(20deg) rotateY(40deg) rotateZ(-20deg);
+  z-index: 5;
+}
+
+.pattern {
+  background-size: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400%;
+  animation: scroll linear 20s infinite;
+}
+
+.pattern {
+  background-image: url("https://64.media.tumblr.com/2282cda7198de8f0523b7e06cad3221a/ab4183e8aeddbd6f-31/s2048x3072/3a42b84ae8b879efa44700d5a13323deed9b4066.jpg");
+  /*background-size: cover;*/
+}
+
+@keyframes scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-4000px, 0, 0);
+  }
+}
+.credit {
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 2px;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  width: 100%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.credit a {
+  background-color: yellow;
+  color:  red;
+  padding: 0 2px;
+  text-decoration: none;
+}
